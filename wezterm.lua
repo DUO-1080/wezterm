@@ -10,6 +10,21 @@ config.keys = {
 		action = wezterm.action.ToggleFullScreen,
 	},
 	{
+		key = "Enter",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SendString("\x1b[13;6u"),
+	},
+	{
+		key = "Enter",
+		mods = "CTRL",
+		action = wezterm.action.SendString("\x1b[13;5u"),
+	},
+	{
+		key = "Enter",
+		mods = "SHIFT",
+		action = wezterm.action.SendString("\x1b[13;2u"),
+	},
+	{
 		key = "q",
 		mods = "CTRL",
 		action = wezterm.action.CloseCurrentTab({ confirm = false }),
@@ -35,7 +50,7 @@ config.font_size = 17
 config.line_height = 1.0
 
 -- window
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
 	right = 0,
