@@ -35,6 +35,13 @@ config.keys = {
 		action = wezterm.action.DisableDefaultAssignment,
 	},
 }
+config.mouse_bindings = {
+	-- 双击选中单词后自动复制
+	{
+		event = { Up = { streak = 2, button = "Left" } },
+		action = wezterm.action.CopyTo("Clipboard"),
+	},
+}
 
 -- color scheme
 local elighties_theme = wezterm.color.get_builtin_schemes()["Eighties (dark) (terminal.sexy)"]
@@ -51,11 +58,11 @@ config.color_scheme = "ever_forest"
 
 -- font
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 18
-config.line_height = 1.2
+config.font_size = 17
+-- config.line_height = 1
 
 -- window
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.window_padding = {
 	left = 0,
 	right = 0,
