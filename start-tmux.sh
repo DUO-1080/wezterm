@@ -9,4 +9,5 @@ if tmux ls &>/dev/null; then
 else
 	# 如果没有现有的会话，则创建一个新的会话
 	exec tmux new-session -s brec 'zsh -ic brec'
+	# exec tmux new-session -s blrec
 fi

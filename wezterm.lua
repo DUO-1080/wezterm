@@ -41,6 +41,12 @@ config.mouse_bindings = {
 		event = { Up = { streak = 2, button = "Left" } },
 		action = wezterm.action.CopyTo("Clipboard"),
 	},
+
+	{
+		event = { Up = { streak = 2, button = "Left" } },
+		mods = "NONE",
+		action = wezterm.action.CompleteSelection("ClipboardAndPrimarySelection"),
+	},
 }
 
 -- color scheme
@@ -59,10 +65,10 @@ config.color_scheme = "ever_forest"
 -- font
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 17
--- config.line_height = 1
+config.line_height = 1
 
 -- window
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 config.window_padding = {
 	left = 0,
 	right = 0,
